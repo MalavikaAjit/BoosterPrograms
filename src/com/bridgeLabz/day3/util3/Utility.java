@@ -35,4 +35,19 @@ public class Utility {
         }
         return b[5];
     }
+    //Prime nos in a given range
+    public static void prime(int st , int en){
+        int count;
+        for(int i = st ; i <= en ; i++)
+        {
+            count = 0;
+            for(int j = 1 ; j <= i ; j++)
+            {
+                if(i % j == 0)
+                    count = count+1;
+            }
+            if(count == 2)
+                System.out.println(i);
+        }
+    }
 }

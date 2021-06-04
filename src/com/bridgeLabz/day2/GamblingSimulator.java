@@ -1,29 +1,18 @@
 package com.bridgeLabz.day2;
 
+import com.bridgeLabz.day2.util2.Utility;
+
+import java.util.Scanner;
+
 public class GamblingSimulator {
     public static void main(String[] args) {
-        int stake  = Integer. valueOf(args[0]);    // gambler's stating bankroll
-        int goal   = Integer. valueOf(args[1]);    // gambler's desired bankroll
-        int trials = Integer. valueOf(args[2]);    // number of trials to perform
-
-        int bets = 0;        // total number of bets made
-        int wins = 0;        // total number of games won
-
-        // repeat trials times
-        for (int t = 0; t < trials; t++) {
-
-            // do one gambler's ruin simulation
-            int cash = stake;
-            while (cash > 0 && cash < goal) {
-                bets++;
-                if (Math.random() < 0.5) cash++;     // win $1
-                else                     cash--;     // lose $1
-            }
-            if (cash == goal) wins++;                // did gambler go achieve desired goal?
-        }
-        // print results
-        System.out.println(wins + " wins of " + trials);
-        System.out.println("Percent of games won = " + 100.0 * wins / trials);
-        System.out.println("Avg # bets           = " + 1.0 * bets / trials);
+        System.out.println("Enter the number of stake");
+        Scanner scan = new Scanner(System.in);
+        int stake = scan.nextInt();
+        System.out.println("Enter your goal ");
+        int goal = scan.nextInt();
+        System.out.println("Enter the trail or the limit ");
+        int trail = scan.nextInt();
+        Utility.gambling(stake,goal,trail);
     }
 }

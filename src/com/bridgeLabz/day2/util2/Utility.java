@@ -1,6 +1,9 @@
 package com.bridgeLabz.day2.util2;
 // Day 2 problems
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class Utility {
     //Max and Min of 5 Random numbers
     public static void randomNumber(){
@@ -95,4 +98,38 @@ public class Utility {
         }
         return w;
     }
+    public static void gambling(int stake, int goal, int trail) {
+        int random;
+        int win = 0;
+        int loss = 0;
+        boolean loop = true;
+        while (loop) {
+            Random r = new Random();
+            random = r.nextInt(2);
+            if (random == 1) {
+
+                win++;
+                System.out.println("placed a bet and won ");
+                stake++;
+                if (stake == goal) {
+                    System.out.println("congrats you have won ");
+                    loop = false;
+                }
+            } else {
+                loss++;
+                System.out.println("placed a bet and lost");
+                stake--;
+                if (stake == trail) {
+                    System.out.println("sorry you lost");
+                    loop = false;
+                }
+
+            }
+
+        }
+        System.out.println("Total number of wins: " + win);
+        System.out.println("Total number of losses: " + loss);
+        System.out.println("Total number of times placed bets are: " + (win + loss));
+    }
+
 }
