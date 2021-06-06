@@ -98,6 +98,7 @@ public class Utility {
         }
         return w;
     }
+    //gambling problem
     public static void gambling(int stake, int goal, int trail) {
         int random;
         int win = 0;
@@ -123,13 +124,59 @@ public class Utility {
                     System.out.println("sorry you lost");
                     loop = false;
                 }
-
             }
-
         }
         System.out.println("Total number of wins: " + win);
         System.out.println("Total number of losses: " + loss);
         System.out.println("Total number of times placed bets are: " + (win + loss));
     }
+    //Georgian calender
+    public static void day(int month, int day, int year) {
+        int year0 = year - (14 - month) / 12;
+        int x = year0 + (year0 / 4) - (year0 / 100) + (year0 / 400);
+        int month0 = month + 12 * ((14 - month) / 1200) - 2;
 
+        if (month0 == 1) {
+            System.out.println("January");
+        } else if (month0 == 2) {
+            System.out.println("February");
+        } else if (month0 == 3) {
+            System.out.println("March");
+        } else if (month0 == 4) {
+            System.out.println("April");
+        } else if (month0 == 5) {
+            System.out.println("May");
+        } else if (month0 == 6) {
+            System.out.println("June");
+        } else if (month0 == 7) {
+            System.out.println("July");
+        } else if (month0 == 8) {
+            System.out.println("August");
+        } else if (month0 == 9) {
+            System.out.println("September");
+        } else if (month0 == 10) {
+            System.out.println("October");
+        } else if (month0 == 11) {
+            System.out.println("November");
+        } else if (month0 == 12) {
+            System.out.println("December");
+        }
+        int day0 = (day + x + 31 * (month0 / 12)) % 7;
+        if (day0 == 0) {
+            System.out.println("Sunday ");
+        } else if (day0 == 1) {
+            System.out.println("Monday ");
+        } else if (day0 == 2) {
+            System.out.println("Tuesday ");
+        } else if (day0 == 3) {
+            System.out.println("Wednesday ");
+        } else if (day0 == 4) {
+            System.out.println("Thursday ");
+        } else if (day0 == 5) {
+            System.out.println("Friday ");
+        } else if (day0 == 6) {
+            System.out.println("Saturday ");
+        }
+        System.out.println(year0);
+    }
 }
