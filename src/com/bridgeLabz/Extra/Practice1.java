@@ -1,4 +1,4 @@
-package com.bridgeLabz.day5;
+package com.bridgeLabz.Extra;
 
 public class Practice1 {
     public static void main(String[] args)  {

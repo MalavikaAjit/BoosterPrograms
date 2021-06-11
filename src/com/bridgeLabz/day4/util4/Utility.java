@@ -13,7 +13,7 @@ public class Utility {
             System.out.println("The string is not palindrome.");
         }
     }
-    public static void calenderDate(int day, int month){
+    /*public static void calenderDate(int day, int month){
         int day0 = (day + x + 31 * (month / 12)) % 7;
         if (day0 == 0) {
             System.out.println("Sunday ");
@@ -31,7 +31,7 @@ public class Utility {
             System.out.println("Saturday ");
         }
         System.out.println(day0);
-    }
+    }*/
    public static void duplicate(int[] arr, int size) {
        System.out.println(" input array is: ");
        for (int i = 0; i < size; i++) {
