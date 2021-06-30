@@ -34,14 +34,44 @@ public class MathFunction {
         }
         System.out.println("\n" + "harmonic No " + result);
     }
-    public static void main(String[] args)  {
-        System.out.println("Enter a number: ");
-        Scanner scan = new Scanner(System.in);
-        int value = scan.nextInt();
-
-        cosCalculation(value);
-        sinCalculation(value);
-        harmonicNumber(value);
-        binary(value);
+    public static void factorial(int number) {
+        int i ;
+        int fact = 0;
+        for(i=1;i<=number;i++){
+            fact=fact*i;
+        }
+        System.out.println("Factorial of "+number+" is: "+ fact);
+    }
+    public static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i < Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void maxim(int [] arr){
+        int max = arr[0];
+        for(int i = 0; i<arr.length ; i++){
+            if(max < arr[i]){
+                max=arr[i];
+            }
+        }
+        System.out.println("Maximum is " + max);
+    }
+    public static void min(int [] arr){
+        int min = arr[0];
+        for(int i = 0; i<arr.length ; i++){
+            if(min > arr[i]){
+                min=arr[i];
+            }
+        }
+        System.out.println("Minimum is " + min);
+    }
+    public static void moneyInvested(int r , int T , int C){
+        double amount = C/(1);
     }
 }
